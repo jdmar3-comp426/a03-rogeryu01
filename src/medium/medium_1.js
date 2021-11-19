@@ -112,6 +112,8 @@ if (g < 0) {
 arraydistance.push(g)
     i++
  });
+
+
 let arraydistancesum = 0
  arraydistance.forEach(element => {
    
@@ -134,7 +136,7 @@ let variance = stdev *stdev
     median: median,
     min: Number(min),
     max: Number(max),
-    variance: variance,
+    variance: arraydistancesum,
     standard_deviation: stdev
 
   }
