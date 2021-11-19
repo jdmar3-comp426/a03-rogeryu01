@@ -88,20 +88,19 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
 
-const array2 = []
-let i = 0
- array.forEach(element => {
-   let f = array[i]
-    let g =  {
-        f : array[i]
+    const answer = {}
+
+for (let i = 0; i<array.length; i++) {
+
+
+    for (let j = 0; i<array.length; j++) {
+
     }
 
-    array2.push(g)
 
-i++
- });
+}
 
-return array2
+return _.countBy(array)
 
 }
 
