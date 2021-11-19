@@ -124,9 +124,9 @@
       const copy = Object.assign({},object);
    
       keyList.forEach(element => {
-      
-         delete copy[key]
-   
+         delete copy[keyList[i]]
+
+         i++
       });
    
    return copy
