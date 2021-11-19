@@ -123,6 +123,8 @@
    
       const copy = Object.assign({},object);
    
+   let i = 0
+
       keyList.forEach(element => {
          delete copy[keyList[i]]
 
