@@ -107,14 +107,17 @@ const arraydistance = []
 array.forEach(element => {
    
 let g = mean - array[i]
+
 if (g < 0) {
-    g *-1
+    g * -1
 }
+
 arraydistance.push(g)
     i++
  });
 
 i = 0
+
 let arraydistancesum = 0
  arraydistance.forEach(element => {
    
@@ -126,7 +129,7 @@ let arraydistancesum = 0
 
      let stdev = arraydistancesum/array.length
 
-let variance = stdev *stdev
+        let variance = stdev *stdev
 
 
 
