@@ -33,7 +33,8 @@ export function getMedian(array) {
 
   
   let sortedarray = array.sort(function(a,b){return a- b});
-  medianpoint = Math.floor(array.length/2)
+  
+  let medianpoint = Math.floor(array.length/2)
 
   if( array.length % 2 == 0) {
     return ((sortedarray[medianpoint -1] + sortedarray[medianpoint])/2)
