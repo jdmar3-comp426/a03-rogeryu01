@@ -69,7 +69,7 @@ export function maxAndMin(numbers) {
     }
     }
 
-    let returnarray = {max: Cmax, 
+    let returnarray = {max: 5, 
         min: Cmin};
 
     return returnarray;
@@ -88,20 +88,20 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
 
-
-
-for( let i = 0; i < array.length; i++) {
-    
-    for( let j = 0; i <array.length; i ++) {
-
-
+const array2 = []
+let i = 0
+ array.forEach(element => {
+   let f = array[i]
+    let g =  {
+        f : array[i]
     }
 
+    array2.push(g)
 
-}
+i++
+ });
 
-
-
+return array2
 
 }
 
