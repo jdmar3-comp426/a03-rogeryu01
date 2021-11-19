@@ -66,12 +66,26 @@ export function getMedian(array) {
  */
 export function getStatistics(array) {
 
+
+
+let max = 0
+let min = 100000000000
+
+for (let i = 0; i < array.length; i++) {
+
+    if (array[i] < min) {
+        min = array[i]
+    }      
+
+    if (array[i] > max) {
+        max = array[i]
+    }
+    }
+
  
   let sum = 0;
   let mean = 0;
   let median = 0
-  let min = Math.min(array)
-  let max = Math.max(array)
   let i = array.sort(function(a,b){return a- b});
   let medianpoint = Math.floor(array.length/2)
 
@@ -113,8 +127,8 @@ let variance = stdev *stdev
     sum: sum,
     mean: mean,
     median: median,
-    min: min,
-    max: max,
+    min: Number(min),
+    max: Number(max),
     variance: variance,
     standard_deviation: stdev
 
