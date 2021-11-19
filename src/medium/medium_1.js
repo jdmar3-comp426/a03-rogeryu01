@@ -66,15 +66,10 @@ export function getMedian(array) {
  */
 export function getStatistics(array) {
 
-  let length = 0
+ 
   let sum = 0;
   let mean = 0;
   let median = 0
-  let min = 0
-  let max = 0
-  let variance = 0;
-  let standard_deviation = 0;
-
   let i = array.sort(function(a,b){return a- b});
   let medianpoint = Math.floor(array.length/2)
 
