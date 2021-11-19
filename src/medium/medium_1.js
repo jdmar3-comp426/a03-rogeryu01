@@ -83,7 +83,8 @@ export function getStatistics(array) {
   for (let i = 0; i < array.length; i++) {
     sum += array[i];
  }
- let mean = array.length/sum;
+ 
+mean = array.length/sum;
 
 let g = 0
 const arraydistance = []
