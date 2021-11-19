@@ -70,21 +70,21 @@ export function getStatistics(array) {
   let sum = 0;
   let mean = 0;
   let median = 0
+  let min = Math.min(array)
+  let max = Math.max(array)
   let i = array.sort(function(a,b){return a- b});
   let medianpoint = Math.floor(array.length/2)
 
   if( array.length % 2 == 0) {
     median = ((i[medianpoint -1] + i[medianpoint])/2)
-
   }
   median = i[medianpoint]
-
 
   for (let i = 0; i < array.length; i++) {
     sum += array[i];
  }
  
-mean = array.length/sum;
+mean = sum/array.length;
 
 let g = 0
 const arraydistance = []
@@ -113,8 +113,8 @@ let variance = stdev *stdev
     sum: sum,
     mean: mean,
     median: median,
-    min: i[0],
-    max: i[array.length -1],
+    min: min,
+    max: max,
     variance: variance,
     standard_deviation: stdev
 
