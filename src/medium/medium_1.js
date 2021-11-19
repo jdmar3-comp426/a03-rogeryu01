@@ -121,7 +121,7 @@ array.forEach(element => {
  g = array[i] - mean
 
 if (g < 0) {
-    g * -1
+    g *= -1
 }
 
 arraydistance.push(g)
@@ -134,6 +134,7 @@ i = 0
         arraydistance.forEach(element => {
    
         arraydistancesum += arraydistance[i]
+       
         i++
         });
 
