@@ -69,7 +69,8 @@ export function maxAndMin(numbers) {
     }
     }
 
-    let returnarray = {min: Cmin, max: Cmax};
+    let returnarray = {max: Cmax, 
+        min: Cmin};
 
     return returnarray;
 }
