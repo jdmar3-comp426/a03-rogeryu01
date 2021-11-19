@@ -103,7 +103,8 @@ mean = sum/array.length;
 
 
 const arraydistance = []
- array.forEach(element => {
+ i = 0
+array.forEach(element => {
    
 let g = mean - array[i]
 if (g < 0) {
@@ -113,7 +114,7 @@ arraydistance.push(g)
     i++
  });
 
-
+i = 0
 let arraydistancesum = 0
  arraydistance.forEach(element => {
    
