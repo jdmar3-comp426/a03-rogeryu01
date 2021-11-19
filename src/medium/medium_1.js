@@ -107,15 +107,23 @@ const arraydistance = []
 //reset counter 
 let g = 0
 
-i = 0
+
+for (let i = 0; i < array.length; i++) {
+    g = array[i] - mean
+
+    g = Math.abs(g) 
+    arraydistance.push(g)
+ }
+
+
 array.forEach(element => {
    
  g = array[i] - mean
 
 if (g < 0) {
     g *= -1
-}
 
+}
 arraydistance.push(g)
     i++
  });
@@ -128,7 +136,8 @@ arraydistance.push(g)
         i++
         });
 
-    let stdev = arraydistancesum/array.length -1 
+    let stdev = Math.standard_deviation(array)
+    //arraydistancesum/array.length -1 
     let variance = stdev * stdev
 
 
