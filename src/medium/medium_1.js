@@ -76,7 +76,7 @@ export function getStatistics(array) {
   let standard_deviation = 0;
 
   let i = array.sort(function(a,b){return a- b});
-  medianpoint = Math.floor(array.length/2)
+  let medianpoint = Math.floor(array.length/2)
 
   if( array.length % 2 == 0) {
     median = ((i[medianpoint -1] + i[medianpoint])/2)
@@ -88,18 +88,39 @@ export function getStatistics(array) {
   for (let i = 0; i < array.length; i++) {
     sum += array[i];
  }
+ let mean = array.length/sum;
 
+let g = 0
+const arraydistance = []
+ array.forEach(element => {
+   
+let g = mean - array[i]
+if (g < 0) {
+    g *-1
+}
 
+arraydistance.push(g)
 
+    i++
+ });
+let arraydistancesum = 0
+ arraydistance.forEach(element => {
+   
+    arraydistancesum += arraydistance[i]
+        i++
+     });
+
+let stdev = arraydistancesum/array.length
+let variance = stdev *stdev
   return {
     length: array.length,
     sum: sum,
-    mean: sum/array.length,
+    mean: mean,
     median: median,
     min: i[0],
     max: i[array.length -1],
-    variance: 2.6666666666666665,
-    standard_deviation: 1.632993161855452
+    variance: variance,
+    standard_deviation: stdev
 
   }
 
