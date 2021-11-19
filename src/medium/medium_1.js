@@ -93,14 +93,15 @@ for (let i = 0; i < array.length; i++) {
     median = ((i[medianpoint -1] + i[medianpoint])/2)
   }
   median = i[medianpoint]
-
+// findind median
   for (let i = 0; i < array.length; i++) {
     sum += array[i];
  }
  
 mean = sum/array.length;
+// finding mean
 
-let g = 0
+
 const arraydistance = []
  array.forEach(element => {
    
@@ -108,9 +109,7 @@ let g = mean - array[i]
 if (g < 0) {
     g *-1
 }
-
 arraydistance.push(g)
-
     i++
  });
 let arraydistancesum = 0
@@ -120,8 +119,14 @@ let arraydistancesum = 0
         i++
      });
 
-let stdev = arraydistancesum/array.length
+
+
+     let stdev = arraydistancesum/array.length
+
 let variance = stdev *stdev
+
+
+
   return {
     length: array.length,
     sum: sum,
