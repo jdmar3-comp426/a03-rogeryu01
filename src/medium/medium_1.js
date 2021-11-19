@@ -102,11 +102,14 @@ mean = sum/array.length;
 // finding mean
 
 
+// declare new array
 const arraydistance = []
+//reset counter 
  i = 0
+ let g = 0
 array.forEach(element => {
    
-let g = mean - array[i]
+ g = array[i] - mean
 
 if (g < 0) {
     g * -1
@@ -124,8 +127,6 @@ let arraydistancesum = 0
     arraydistancesum += arraydistance[i]
         i++
      });
-
-
 
      let stdev = arraydistancesum/array.length
 
