@@ -138,7 +138,7 @@ i = 0
         i++
         });
 
-     let stdev = arraydistancesum
+     let stdev = arraydistancesum/array.length
 
     let variance = stdev * stdev
 
@@ -151,7 +151,7 @@ i = 0
     median: median,
     min: Number(min),
     max: Number(max),
-    variance: arraydistancesum,
+    variance: variance,
     standard_deviation: stdev
 
   }
