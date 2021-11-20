@@ -114,7 +114,7 @@ if (g < 0) {
     g *= -1
 
  }
-g = g^2
+g = Math.pow(g,2)
 
     arraydistance.push(g)
  }
