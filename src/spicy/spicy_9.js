@@ -16,6 +16,20 @@
  */
 export const repeat = (fn, n, ...params) => {
 
+    const returnarray =[]
+
+    let g = 0
+    while (n > 0) {
+       g = fn(params)
+        returnarray.push(g)
+        n--
+    }
+
+    
+
+return returnarray
+
+
 };
 
 
