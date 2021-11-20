@@ -104,10 +104,8 @@ mean = sum/array.length;
 
 // declare new array
 const arraydistance = []
-//reset counter 
+
 let g = 0
-
-
 for (let i = 0; i < array.length; i++) {
     g = array[i] - mean
 
@@ -115,26 +113,31 @@ for (let i = 0; i < array.length; i++) {
     arraydistance.push(g)
  }
 
+ let arraydistancesum = 0
 
-array.forEach(element => {
+ for (let i = 0; i < array.length; i++) {
+     arraydistancesum += arraydistance[i]
+  }
+
+
+// array.forEach(element => {
    
- g = array[i] - mean
+//  g = array[i] - mean
 
-if (g < 0) {
-    g *= -1
+// if (g < 0) {
+//     g *= -1
 
-}
-arraydistance.push(g)
-    i++
- });
+// }
+// arraydistance.push(g)
+//     i++
+//  });
 
-    i = 0
+        
 
-        let arraydistancesum = 0
-        arraydistance.forEach(element => {
-        arraydistancesum += arraydistance[i]
-        i++
-        });
+        // arraydistance.forEach(element => {
+        // arraydistancesum += arraydistance[i]
+        // i++
+        // });
 
     let stdev = arraydistancesum/array.length 
     let variance = stdev * stdev
@@ -150,7 +153,6 @@ arraydistance.push(g)
     max: Number(max),
     variance: variance,
     standard_deviation: stdev
-
   }
 
 
