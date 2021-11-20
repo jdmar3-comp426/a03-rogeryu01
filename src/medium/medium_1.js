@@ -136,8 +136,7 @@ arraydistance.push(g)
         i++
         });
 
-    let stdev = Math.standard_deviation(array)
-    //arraydistancesum/array.length -1 
+    let stdev = arraydistancesum/array.length 
     let variance = stdev * stdev
 
 
