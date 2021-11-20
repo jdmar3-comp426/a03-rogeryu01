@@ -109,7 +109,11 @@ let g = 0
 for (let i = 0; i < array.length; i++) {
     g = array[i] - mean
 
-    g = Math.abs(g) 
+  
+if (g < 0) {
+    g *= -1
+
+ }
     arraydistance.push(g)
  }
 
