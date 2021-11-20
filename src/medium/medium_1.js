@@ -146,7 +146,7 @@ g = Math.pow(g,2)
         // });
 
     let stdev = arraydistancesum/array.length 
-    let variance = stdev * stdev
+    let variance = Math.pow(stdev,.5)
 
 
 
@@ -157,8 +157,8 @@ g = Math.pow(g,2)
     median: median,
     min: Number(min),
     max: Number(max),
-    variance: variance,
-    standard_deviation: stdev
+    variance: stdev,
+    standard_deviation: variance
   }
 
 
