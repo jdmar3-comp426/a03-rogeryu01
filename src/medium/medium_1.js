@@ -114,6 +114,8 @@ if (g < 0) {
     g *= -1
 
  }
+g = g^2
+
     arraydistance.push(g)
  }
 
