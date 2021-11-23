@@ -157,6 +157,17 @@ return g
  */
 export const someEven = (arr, test) => {
 
+let g = false;
+
+for( let i = 0; i < arr.length; i++) {
+    if(test(arr[i]) == true) {
+        return true
+    } 
+}
+
+return g
+
+
 };
 
 
