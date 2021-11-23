@@ -90,10 +90,10 @@ export function countArray(array) {
 
 let counter = {};
 array.forEach(element => {
-    if(counter[item]) {
-        counter[item]++
+    if(counter[element]) {
+        counter[element]++
     } else  {
-        counter[item] = 1
+        counter[element] = 1
     }
     
 });
