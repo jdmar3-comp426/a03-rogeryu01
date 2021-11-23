@@ -37,7 +37,15 @@ return returnarray
  * Use the repeat function to log the string "Hello, world!" to the console
  *   10 times.
  */
+
+export function log(string) {
+    console.log(string)
+}
+
 export const repeatDemo = () => {
+
+    return repeat(log, 10, "Hello, world:")
+
 
 };
 
@@ -55,6 +63,11 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
+
+    return function (num2) {
+        return num1 *num2;
+    };
+
 
 };
 
