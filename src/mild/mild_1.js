@@ -88,9 +88,17 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
 
+let counter ={};
+array.array.forEach(element => {
+    if(counter[item]) {
+        counter[item]++
+    } else  {
+        counter[item] = 1
+    }
+    
+});
 
-
-return _.countBy(array)
+return counter
 
 }
 
