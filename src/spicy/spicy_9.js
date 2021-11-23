@@ -20,8 +20,7 @@ export const repeat = (fn, n, ...params) => {
 
     let g = 0
     while (n > 0) {
-       g = fn(params)
-       String(g)
+       g = fn(...params)
         returnarray.push(g)
         n--
     }
