@@ -225,7 +225,7 @@ return {
  */
 export const allEvensAreOdd = (arr) => {
 
-return everyEven(Arr, (x) => x% 2 ===1)
+return everyEven(arr, (x) => x% 2 ===1)
 
 
 
@@ -253,6 +253,6 @@ export const hasExactly = (arr, test, n) => {
 
 
     let filteredarray = filter(arr,test)
-    return filteredarray.length ===n;
+    return filteredarray.pass.length ===n;
 
 };
