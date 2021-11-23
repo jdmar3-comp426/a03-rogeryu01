@@ -159,7 +159,7 @@ export const someEven = (arr, test) => {
 
 let g = false;
 
-for( let i = 0; i < arr.length; i++) {
+for( let i = 0; i < arr.length; i += 2) {
     if(test(arr[i]) == true) {
         return true
     } 
@@ -193,6 +193,27 @@ return g
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
+
+const yes = []
+const no = []
+
+
+for( let i = 1; i < arr.length; i+= 2) {
+    if( test(arr[i])) {
+        yes.push(arr[i])
+        
+    } else {
+        no.push(arr[i])
+    }
+
+}
+
+
+return {
+    pass: yes,
+    fail: no
+}
+
 
 };
 
