@@ -198,7 +198,7 @@ const yes = []
 const no = []
 
 
-for( let i = 1; i < arr.length; i+= 2) {
+for( let i = 0; i < arr.length; i++) {
     if( test(arr[i])) {
         yes.push(arr[i])
         
