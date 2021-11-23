@@ -44,7 +44,7 @@ export function log(string) {
 
 export const repeatDemo = () => {
 
-    return repeat(log, 10, "Hello, world:")
+    return repeat(log, 10, "Hello, world!")
 
 
 };
