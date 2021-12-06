@@ -8,7 +8,11 @@
  * returns: '3 + 4 = 7'
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
-export function sumToString(a, b) {
+ export function sumToString(a, b) {
+
+    let x = a + b
+    var z = b + "";
+    return  (a) + ' + ' + (b) +' = ' + x
 
 }
 
@@ -25,6 +29,20 @@ export function sumToString(a, b) {
  */
 export function getIncreasingArray(startNumber, endNumber) {
 
+    let min = startNumber;
+    let max = endNumber;
+    let counter = startNumber
+    const array =[]
+
+    for (let i = 0 ;i < endNumber - startNumber + 1; i++ ) {
+      
+        array[i] = counter
+        counter++
+
+    }
+
+    return array
+
 }
 
 /**
@@ -36,7 +54,27 @@ export function getIncreasingArray(startNumber, endNumber) {
  */
 export function maxAndMin(numbers) {
 
+    let array = numbers;
+    let Cmax = 0;
+    let Cmin = 100000000000;
+
+    for (let i = 0; i < array.length; i++) {
+
+    if (array[i] < Cmin) {
+        Cmin = array[i]
+    }      
+
+    if (array[i] > Cmax) {
+        Cmax = array[i]
+    }
+    }
+
+    let returnarray = {max: Number(Cmax), 
+        min: Number(Cmin)};
+
+    return returnarray;
 }
+
 
 /**
  *
@@ -50,4 +88,17 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
 
+let counter = {};
+array.forEach(element => {
+    if(counter[element]) {
+        counter[element]++
+    } else  {
+        counter[element] = 1
+    }
+    
+});
+
+return counter
+
 }
+

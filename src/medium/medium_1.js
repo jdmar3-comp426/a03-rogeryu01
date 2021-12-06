@@ -9,6 +9,14 @@ import {variance} from "./data/stats_helpers.js";
  */
 export function getSum(array) {
 
+
+   let total = 0
+   for (let i = 0; i < array.length; i++) {
+      total += array[i];
+   }
+   
+    return total
+
 }
 
 
@@ -16,12 +24,24 @@ export function getSum(array) {
  * Calculates the median of an array of numbers.
  * @param {number[]} array
  * @returns {number|*}
- *
+ * 
  * example:
  * let array = [3,2,5,6,2,7,4,2,7,5];
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
+
+  
+  let sortedarray = array.sort(function(a,b){return a- b});
+  
+  let medianpoint = Math.floor(array.length/2)
+
+  if( array.length % 2 == 0) {
+    return ((sortedarray[medianpoint -1] + sortedarray[medianpoint])/2)
+
+  }
+
+  return sortedarray[medianpoint]
 
 }
 
@@ -46,5 +66,103 @@ export function getMedian(array) {
  */
 export function getStatistics(array) {
 
+
+
+let max = 0
+let min = 100000000000
+
+for (let i = 0; i < array.length; i++) {
+
+    if (array[i] < min) {
+        min = array[i]
+    }      
+
+    if (array[i] > max) {
+        max = array[i]
+    }
+    }
+
+ 
+  let sum = 0;
+  let mean = 0;
+  let median = 0
+  let i = array.sort(function(a,b){return a- b});
+  let medianpoint = Math.floor(array.length/2)
+
+  if( array.length % 2 == 0) {
+    median = ((i[medianpoint -1] + i[medianpoint])/2)
+  }
+  median = i[medianpoint]
+// findind median
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+ }
+ 
+mean = sum/array.length;
+// finding mean
+
+
+// declare new array
+const arraydistance = []
+
+let g = 0
+for (let i = 0; i < array.length; i++) {
+    g = array[i] - mean
+
+  
+if (g < 0) {
+    g *= -1
+
+ }
+g = Math.pow(g,2)
+
+    arraydistance.push(g)
+ }
+
+ let arraydistancesum = 0
+
+ for (let i = 0; i < array.length; i++) {
+     arraydistancesum += arraydistance[i]
+  }
+
+
+// array.forEach(element => {
+   
+//  g = array[i] - mean
+
+// if (g < 0) {
+//     g *= -1
+
+// }
+// arraydistance.push(g)
+//     i++
+//  });
+
+        
+
+        // arraydistance.forEach(element => {
+        // arraydistancesum += arraydistance[i]
+        // i++
+        // });
+
+    let stdev = arraydistancesum/array.length 
+    let variance = Math.pow(stdev,.5)
+
+
+
+  return {
+    length: array.length,
+    sum: sum,
+    mean: mean,
+    median: median,
+    min: Number(min),
+    max: Number(max),
+    variance: stdev,
+    standard_deviation: variance
+  }
+
+
+
 }
+
 
